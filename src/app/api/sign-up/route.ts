@@ -62,10 +62,11 @@ export async function POST(request: Request) {
       verifyCode
     );
     if (!emailResponse.success) {
+      console.log("Error sending verification email", emailResponse.success);
       return Response.json(
         {
           success: false,
-          message: emailResponse.message,
+          message:"Error sending verification email:  " + emailResponse.message,
         },
         { status: 500 }
       );

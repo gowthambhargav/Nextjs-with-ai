@@ -11,7 +11,7 @@ try {
         subject: 'Mystry Verification code',
         react: VerificationEmail({username,otp:verifyCode}),
       });
-    return {success:false, message:"verification email Sent successfully"}
+    return {success:true, message:"verification email Sent successfully"}
 } catch (error) {
     console.error("Error Sending verification email",error)
     return {success:false, message:"Failed to send verification email"}
